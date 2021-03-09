@@ -1,0 +1,67 @@
+body {
+  background: coral;
+}
+h1,
+p {
+  font-family: Lato;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: min(152px);
+  grid-template-rows: 1fr, 3fr;
+  grid-auto-rows: 80px;
+
+  grid-template-areas:
+    "header header"
+    "itemList content";
+}
+.content {
+  grid-area: content;
+  background-color: aliceblue;
+  height: 400px;
+}
+.header {
+  display: flex;
+  grid-area: header;
+  align-items: top;
+  background-color: rgb(11, 51, 46);
+}
+.logo {
+  grid-area: logo;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: 30px;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+.nav-bar {
+  display: flex;
+  grid-area: nav;
+  flex-wrap: ;
+  align-items: flex-start;
+  padding-top: 13px;
+}
+.button {
+  border: 1px solid rgb(70, 70, 78);
+  padding: 1px 10px;
+  margin-top: 1px;
+}
+.nav-button-one {
+  margin-left: 10px;
+}
+.nav-button-two {
+  margin-left: 20px;
+}
+
+.item-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 152px;
+  height: 400px;
+  grid-area: itemList;
+  background-color: crimson;
+}
