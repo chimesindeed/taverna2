@@ -38,9 +38,9 @@ p {
   padding-left: 5px;
 }
 .nav-bar {
-  display: flex;
+  display: flex; 
   grid-area: nav;
-  flex-wrap: ;
+  flex-wrap: wrap;
   align-items: flex-start;
   padding-top: 13px;
 }

@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import "./style.css";
 
+
 export default function App() {
+  const renderItems =()=> {
+
+  }
   return (
     <div className="container">
       
@@ -19,7 +23,11 @@ export default function App() {
       
       </div>
       
-      <div className="item-list">Items</div>
+      <div className="item-list">
+        {
+          renderItems()
+        }  
+      </div>
       
       <div className="content">Content</div>
     
