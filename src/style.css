@@ -1,36 +1,38 @@
 body {
-  background: coral;
+  background: rgb(11, 51, 46);
 }
 h1,
 p {
   font-family: Lato;
 }
-
+.main{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 .container {
-  height: 100vh;
-  width: 100vw;
+  width: 600px;
+  height: 400px;
+  border: 2px solid blue;
   display: grid;
   grid-template-columns: min(152px);
-  grid-template-rows: 1fr, 3fr;
   grid-auto-rows: 80px;
 
   grid-template-areas:
     "header header"
-    "itemList content";
+    "content content";
 }
-.content {
-  grid-area: content;
-  background-color: aliceblue;
-  height: 400px;
-}
-.header {
+.container-header {
   display: flex;
+  height: 80px;
+  justify-content: space-between;
   grid-area: header;
-  align-items: top;
-  background-color: rgb(11, 51, 46);
+  background-color: black;
 }
 .logo {
-  grid-area: logo;
   color: rgb(255, 255, 255);
   font-weight: 600;
   font-size: 30px;
@@ -38,8 +40,10 @@ p {
   padding-left: 5px;
 }
 .nav-bar {
+  margin: 10px;
+  width: 300px;
+  background-color: brown;
   display: flex; 
-  grid-area: nav;
   flex-wrap: wrap;
   align-items: flex-start;
   padding-top: 13px;
@@ -48,6 +52,7 @@ p {
   border: 1px solid rgb(70, 70, 78);
   padding: 1px 10px;
   margin-top: 1px;
+  background-color: lavender;
 }
 .nav-button-one {
   margin-left: 10px;
@@ -55,13 +60,28 @@ p {
 .nav-button-two {
   margin-left: 20px;
 }
-
+.container-body {
+  display: flex;
+  grid-area: content;
+  width: 600px;
+  height: 320px
+}
 .item-list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 152px;
-  height: 400px;
-  grid-area: itemList;
-  background-color: crimson;
+  height: 320px;
+  width: 270px;
+  overflow: auto;
+  background-color: brown;
+}
+.content {
+  background-color: aliceblue;
+  width: 448px;
+}
+.list-item {
+
+  align-self: center;
+  list-style-type: none;
+  margin: 4px;
+  
+  color: white;
 }

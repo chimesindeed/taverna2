@@ -13,8 +13,7 @@ export default function App() {
         .then((res)=>{return setItems(res)})
   }
 
-  useEffect(()=>{ return (getItems(), []) })
-  
+  useEffect( ()=>{ getItems() }, [] ) 
   return (
     <div className="main">
       <div className="container">
